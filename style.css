@@ -252,6 +252,59 @@ img {
 
 
 
+/* day care */
+
+.afterschool {
+    position: absolute; /* Fixes the container in place */
+    top: 0; /* Adjust the position as needed */
+    left: 0; /* Adjust the position as needed */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: 1; /* Ensures the container is on top of other elements */
+    animation: swing 2s infinite ease-in-out;
+   
+}
+
+
+
+.afterschool img {
+    width: 40%;
+    height: 40%; 
+    object-fit: contain; 
+    position: relative; 
+    top: 1250px;
+    left: 32%;
+    animation: rotate 5s linear infinite ;
+    transform: rotate(0deg);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    
+}
+
+.afterschool .afterschool_para {
+    position: relative; 
+    top: 1140px;
+    left:51%; 
+    transform: translate(-50%, -50%); 
+    color: rgb(12, 12, 12);
+ text-align: center ;
+    z-index: 2;
+  
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+
+
+
 
 .contact-card-container{
     

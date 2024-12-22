@@ -98,6 +98,7 @@ body{
     font-size: 70px;
     font-weight: 600;
     letter-spacing: 1px;
+   
 }
 
 .Feature p{
@@ -108,7 +109,16 @@ body{
     letter-spacing: 1px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/* From Uiverse.io by eslam-hany */ 
+
+.Feature .row h5{
+    color:rgb(255, 0, 0);
+    -webkit-text-stroke: 0.7px rgb(122, 120, 120);
+    position: relative;
+    left: -30px;
+}
+
+
+
 .card-feature {
     position: relative;
     width: 270px;
@@ -211,12 +221,7 @@ body{
     justify-content: center;
 }
 
-.TuitionConducted img{
-    max-height: 500px;
-    height: 100%;
-    width: 100%;
-    object-fit:fill;
-}
+
 
 .TuitionConducted h3 {
     color: red; /* Text color */
@@ -235,6 +240,14 @@ body{
     letter-spacing: 1px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
+.fixed-img-prime {
+    background: url("images/joys.jpg") no-repeat center center fixed; /* Fixed background */
+    background-size: cover; /* Ensures the image covers the full height/width */
+    height: 100vh; /* Full viewport height */
+}
+
 
 
 

@@ -22,7 +22,95 @@
   
 }
 
+.primekids-main{
+    display: block;
+    position: relative;
+   top: 10px;
+    height: 140px;
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.contact-above-786{
+    display: none;
+}
+
+.contact-below-786-1{
+    margin-top: -80px;
+}
+
+
+.contact-card {
+    background-color: #ffcdc7; /* Light pink background */
+    width: 300px; /* Adjust as needed */
+    height: 200px;
+    border-radius: 50%; /* Creates a circular shape */
+    margin-left: 10%;
+  
+}
+
+.contact-card .phone {
+    font-size: medium;
+   
+}
+
+.contact-card .email {
+    
+    font-size: medium;
+   
+}
+
+.contact-card .address {
+    font-size: medium;
+    
+    line-height: .4;
+}
+
+.contact-card .icon {
+    font-size: medium;
+    margin-right: 5px;
+    color: #d32f2f; /* Matching red icons */
+}
+
+.contact-card .email a {
+    margin: 10px 0;
+    font-size: medium;
+    font-weight: 400;
+    color: #555; /* Dark grey */
+}
+
+.contact-card a {
+    font-size: medium;
+    font-weight: 500;
+    color: #d32f2f; /* Bold red */
+    text-decoration: none;
+}
+
 
 
 
 }
+
+@media (min-width:787px) {
+    .primekids-main{
+        display: none;
+    }
+   
+    .contact-below-786-1{
+        display: none;
+    }
+    .contact-below-786-2{
+        display: none;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+

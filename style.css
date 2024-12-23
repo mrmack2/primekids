@@ -131,6 +131,8 @@ body{
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
+    margin: 10px;
+    margin-left: 10%;
     overflow: hidden;
   }
   .card-feature img{
@@ -470,10 +472,24 @@ img {
     font-weight: bold;
     color: #d32f2f; /* Bold red */
 }
+.contact-card a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d32f2f; /* Bold red */
+    text-decoration: none;
+}
+
 
 .contact-card .email {
     margin: 10px 0;
     font-size: 1.5rem;
+    color: #555; /* Dark grey */
+}
+
+.contact-card .email a {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: #555; /* Dark grey */
 }
 
@@ -602,7 +618,7 @@ svg {
 }
 
 .footer-logo {
-    max-width: 100px; /* Adjust logo size */
+    max-width: 200px; /* Adjust logo size */
     height: auto;
 }
 

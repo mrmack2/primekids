@@ -569,3 +569,69 @@ svg {
   
 
 
+  .footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Ensures it adjusts on smaller screens */
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-logo {
+    max-width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+.footer-link, .social-link {
+    color: #4CAF50; /* Green links */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.footer-link:hover, .social-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .footer-logo {
+        margin: 10px 0;
+    }
+}
+
+

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Carousel and Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-res.css">
+</head>
+<style>
+    .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: none;
+}
+
+#preferredSubjects label {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+#preferredSubjects input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #4CAF50; /* Green styling for checkboxes */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+.checkbox-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between checkboxes */
+}
+
+.checkbox-grid label {
+    flex: 1 1 calc(33.333% - 10px); /* Three items per row, minus the gap */
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #4CAF50; /* Green styling for checkboxes */
+}
+
+
+@media (max-width: 768px) {
+    .form-container {
+        margin: 20px;
+        margin-top: 40px;
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #preferredSubjects label {
+        font-size: 14px;
+    }
+}
+</style>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="png/logo1.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#Features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#Activities">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form.html">Application</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<br><br>
+
+
+    <div class="form-container">
+        <h1>Tuition Center Application</h1>
+        <form action="/submit-application" method="POST">
+            <label for="childName">Child's Name:</label>
+            <input type="text" id="childName" name="childName" placeholder="Enter child's full name" required>
+            
+            <label for="age">Child's Age:</label>
+            <input type="number" id="age" name="age" placeholder="Enter child's age" required>
+
+            <label for="parentName">Parent/Guardian's Name:</label>
+            <input type="text" id="parentName" name="parentName" placeholder="Enter parent/guardian's full name" required>
+
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Enter contact number" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address">
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter full address" rows="3"></textarea>
+
+            <label for="preferredSubjects">Preferred Subjects:</label>
+            <div id="preferredSubjects" class="checkbox-grid">
+                <label><input type="checkbox" name="preferredSubjects[]" value="Math"> Math</label>
+                <label><input type="checkbox" name="preferredSubjects[]" value="Science"> Science</label>
+                <label><input type="checkbox" name="preferredSubjects[]" value="English"> English</label>
+                <label><input type="checkbox" name="preferredSubjects[]" value="History"> History</label>
+                <label><input type="checkbox" name="preferredSubjects[]" value="Art"> Art</label>
+                <label><input type="checkbox" name="preferredSubjects[]" value="Music"> Music</label>
+            </div>
+            
+
+            <label for="additionalInfo">Additional Information:</label>
+            <textarea id="additionalInfo" name="additionalInfo" placeholder="Provide any additional details" rows="4"></textarea>
+
+            <input type="submit" value="Apply Now">
+        </form>
+    </div>
+
+
+
+
+
+
+
+   
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Side: Social Media Links -->
+            <div class="footer-left">
+                <a href="#whatsapp" class="social-link">WhatsApp</a>
+                <a href="#facebook" class="social-link">Facebook</a>
+                <a href="#instagram" class="social-link">Instagram</a>
+            </div>
+    
+            <!-- Center: Logo -->
+            <div class="footer-center">
+                <img src="logo.png" alt="Tuition Center Logo" class="footer-logo">
+            </div>
+    
+            <!-- Right Side: Privacy and Terms -->
+            <div class="footer-right">
+                <a href="#privacy-policy" class="footer-link">Privacy Policy</a>
+                <a href="#terms-of-service" class="footer-link">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <!-- Bootstrap JS (Optional, for additional interactive components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Get the navbar element
+        const navbar = document.getElementById('navbar');
+
+        let lastScrollTop = 0; // Keep track of the last scroll position
+
+        window.addEventListener('scroll', function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Check if scrolling down
+            if (currentScroll > lastScrollTop) {
+                // Scroll down - collapse the navbar
+                navbar.classList.add('collapsed');  // Add the collapse class
+                navbar.classList.remove('expanded');  // Remove the expanded class
+            } else {
+                // Scroll up - expand the navbar
+                navbar.classList.remove('collapsed');  // Remove the collapse class
+                navbar.classList.add('expanded');  // Add the expanded class
+            }
+
+            // Update the last scroll position
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const subheadings = document.querySelectorAll('.subheading');
+            const contents = document.querySelectorAll('.content');
+            const imageContainer = document.getElementById('activity-image');
+
+            const images = {
+                music: "https://via.placeholder.com/400x250?text=Music+and+Dance",
+                drawing: "https://via.placeholder.com/400x250?text=Drawing",
+                artcraft: "https://via.placeholder.com/400x250?text=Art+and+Craft",
+                abacus: "https://via.placeholder.com/400x250?text=Abacus"
+            };
+
+            subheadings.forEach(subheading => {
+                subheading.addEventListener('click', () => {
+                    // Update active class for subheadings
+                    subheadings.forEach(item => item.classList.remove('active'));
+                    subheading.classList.add('active');
+
+                    // Show related content
+                    const target = subheading.getAttribute('data-target');
+                    contents.forEach(content => {
+                        content.classList.remove('active');
+                        if (content.id === target) {
+                            content.classList.add('active');
+                        }
+                    });
+
+                    // Update image
+                    imageContainer.src = images[target];
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

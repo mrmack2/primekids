@@ -159,7 +159,7 @@ input[type="submit"]:hover {
 
     <div class="form-container">
         <h1>Tuition Center Application</h1>
-        <form action="/submit-application" method="POST">
+        <form id="applicationForm" action="/submit-application" method="POST">
             <label for="childName">Child's Name:</label>
             <input type="text" id="childName" name="childName" placeholder="Enter child's full name" required>
             
@@ -187,7 +187,6 @@ input[type="submit"]:hover {
                 <label><input type="checkbox" name="preferredSubjects[]" value="Art"> Art</label>
                 <label><input type="checkbox" name="preferredSubjects[]" value="Music"> Music</label>
             </div>
-            
 
             <label for="additionalInfo">Additional Information:</label>
             <textarea id="additionalInfo" name="additionalInfo" placeholder="Provide any additional details" rows="4"></textarea>
@@ -207,14 +206,14 @@ input[type="submit"]:hover {
         <div class="footer-container">
             <!-- Left Side: Social Media Links -->
             <div class="footer-left">
-                <a href="#whatsapp" class="social-link">WhatsApp</a>
-                <a href="#facebook" class="social-link">Facebook</a>
-                <a href="#instagram" class="social-link">Instagram</a>
+                <a href="https://wa.me/+919388788417" target="_blank" class="social-link">WhatsApp</a>
+                <a href="https://www.facebook.com/people/Prime-Kids/61564805870877/?mibextid=wwXIfr&rdid=uMHfu3ZaOCPnipCd&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BZWwn678v%2F%3Fmibextid%3DwwXIfr" target="_blank" class="social-link">Facebook</a>
+                <a href="https://www.instagram.com/primekidsmaradu/" target="_blank" class="social-link">Instagram</a>
             </div>
     
             <!-- Center: Logo -->
             <div class="footer-center">
-                <img src="logo.png" alt="Tuition Center Logo" class="footer-logo">
+                <img src="png/logo2.png" alt="Tuition Center Logo" class="footer-logo">
             </div>
     
             <!-- Right Side: Privacy and Terms -->
@@ -292,6 +291,51 @@ input[type="submit"]:hover {
             });
         });
     </script>
+
+
+<script>
+    // Function to send form data via WhatsApp
+    document.getElementById('applicationForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the form from submitting normally
+        
+        // Collect form data
+        const childName = document.getElementById('childName').value;
+        const age = document.getElementById('age').value;
+        const parentName = document.getElementById('parentName').value;
+        const contactNumber = document.getElementById('contactNumber').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        const additionalInfo = document.getElementById('additionalInfo').value;
+        
+        // Get preferred subjects from checkboxes
+        const preferredSubjects = [];
+        const checkboxes = document.querySelectorAll('input[name="preferredSubjects[]"]:checked');
+        checkboxes.forEach((checkbox) => {
+            preferredSubjects.push(checkbox.value);
+        });
+
+        // Create a message string
+        let message = `Tuition Center Application\n\n`;
+        message += `Child's Name: ${childName}\n`;
+        message += `Age: ${age}\n`;
+        message += `Parent/Guardian's Name: ${parentName}\n`;
+        message += `Contact Number: ${contactNumber}\n`;
+        message += `Email Address: ${email}\n`;
+        message += `Address: ${address}\n`;
+        message += `Preferred Subjects: ${preferredSubjects.join(', ')}\n`;
+        message += `Additional Information: ${additionalInfo}`;
+
+        // URL encode the message (using encodeURIComponent to handle special characters and spaces)
+        const encodedMessage = encodeURIComponent(message);
+
+        // WhatsApp URL to open with pre-filled message
+        const whatsappURL = `https://wa.me/+919388788417?text=${encodedMessage}`;
+
+        // Open WhatsApp with the pre-filled message
+        window.open(whatsappURL, '_blank');
+    });
+</script>
+
 </body>
 
 </html>

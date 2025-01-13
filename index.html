@@ -13,6 +13,7 @@
 
 
 <body>
+    <div class=" webinar_div"> <p>Admission opend   <span class="rocket"></span></p> <a href="form.html"><button class="btn EnrollNow">Register Now!</button></a> </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg" id="navbar">
@@ -176,7 +177,7 @@
             <div class="col-md-12 ">
                 <h3>Additional Features</h3>
                 <ul style="list-style: none;">
-                    <li><strong> LKG to 10 </strong></li>
+                    <li><strong> LKG to 8 Standard (CBSE/State Board) </strong></li>
                     <li><strong> Special Tuition for Hindi and Maths</strong></li>
                     <li><strong> Remedial Teaching</strong></li>
                     <li><strong> Counselling Service Available</strong></li>
@@ -273,7 +274,7 @@
         <div class="contact-card">
             <div class="phone">
                 <span class="icon">📞</span>
-                <a href="tel:-+919388788417"><span class="number">9388788417</span></a>
+                <a href="tel:-+919388788417"><span class="number">+91 9388788417</span></a>
             </div>
             <div class="email">
                 <span class="icon">📧</span>
@@ -313,7 +314,7 @@
         <div class="contact-card contact-below-786-2">
             <div class="phone">
                 <span class="icon">📞</span>
-                <a href="tel:-+919388788417"><span class="number">9388788417</span></a>
+                <a href="tel:-+919388788417"><span class="number">+91 9388788417</span></a>
             </div>
             <div class="email">
                 <span class="icon">📧</span>
@@ -371,27 +372,44 @@
     <script>
         // Get the navbar element
         const navbar = document.getElementById('navbar');
-
+    
         let lastScrollTop = 0; // Keep track of the last scroll position
-
-        window.addEventListener('scroll', function () {
+    
+        // Function to update the navbar position and classes
+        function updateNavbarPosition() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            // Check if scrolling down
+    
+            // Set the top property based on the scroll position
+            if (currentScroll === 0) {
+                navbar.style.top = '60px';
+            } else {
+                navbar.style.top = '0px';
+            }
+    
+            // Apply collapse/expand classes based on scroll direction
             if (currentScroll > lastScrollTop) {
                 // Scroll down - collapse the navbar
-                navbar.classList.add('collapsed');  // Add the collapse class
-                navbar.classList.remove('expanded');  // Remove the expanded class
+                navbar.classList.add('collapsed');
+                navbar.classList.remove('expanded');
             } else {
                 // Scroll up - expand the navbar
-                navbar.classList.remove('collapsed');  // Remove the collapse class
-                navbar.classList.add('expanded');  // Add the expanded class
+                navbar.classList.remove('collapsed');
+                navbar.classList.add('expanded');
             }
-
+    
             // Update the last scroll position
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        }
+    
+        // Add the scroll event listener
+        window.addEventListener('scroll', updateNavbarPosition);
+    
+        // Set the initial state on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateNavbarPosition();
         });
     </script>
+    
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {

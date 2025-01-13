@@ -114,6 +114,11 @@
      .webinar_div p {
          font-size: smaller;
          padding: 0;
+         
+   
+     }
+     .webinar_div{
+        height: 70px;
      }
 
      .webinar_div .EnrollNow {

@@ -30,7 +30,7 @@
      text-transform: capitalize;
      position: relative;
      top: 7px;
-     font-weight: 500;
+     font-weight: 900;
      letter-spacing: 1px;
  }
 
@@ -219,7 +219,7 @@
      font-family: "Outfit", serif;
      font-optical-sizing: auto;
      font-size: x-large;
-     font-weight: 600;
+     font-weight: 1000;
      color: #000000;
      -webkit-text-stroke: 0.4px rgb(0, 0, 0);
      /* Stroke color and width */

@@ -678,13 +678,14 @@
      color: #d32f2f;
      /* Bold red */
      text-decoration: none;
+     
  }
 
 
  .contact-card .email {
      margin: 10px 0;
      font-size: 1.5rem;
-     color: #555;
+     color: #ffffff;
      /* Dark grey */
  }
 
@@ -692,7 +693,7 @@
      margin: 10px 0;
      font-size: 1.5rem;
      font-weight: 400;
-     color: #555;
+     color: #ffffff;
      /* Dark grey */
  }
 

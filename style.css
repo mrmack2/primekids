@@ -648,7 +648,7 @@
 
 
  .contact-card {
-     background-color: #ffcdc7;
+     background-color: #000000;
      /* Light pink background */
      width: 600px;
      /* Adjust as needed */
@@ -697,12 +697,17 @@
  }
 
  .contact-card .address {
-     font-size: 1.3rem;
-     color: #444;
-     /* Slightly darker grey */
-     margin-top: 10px;
-     line-height: 1.4;
- }
+    font-size: 1.3rem;
+    color: #00eeff; /* Slightly darker grey */
+    margin-top: 10px;
+    line-height: 1.4;
+
+    /* Glow effect */
+    text-shadow: 0 0 5px rgba(247, 244, 244, 0.842), 
+                 0 0 10px rgba(68, 68, 68, 0.4), 
+                 0 0 15px rgba(68, 68, 68, 0.3);
+}
+
 
  .contact-card .icon {
      font-size: 1.2rem;

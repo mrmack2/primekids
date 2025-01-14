@@ -178,18 +178,6 @@ input[type="submit"]:hover {
             <label for="address">Address:</label>
             <textarea id="address" name="address" placeholder="Enter full address" rows="3"></textarea>
 
-            <label for="preferredSubjects">Preferred Subjects:</label>
-            <div id="preferredSubjects" class="checkbox-grid">
-                <label><input type="checkbox" name="preferredSubjects[]" value="Math"> Math</label>
-                <label><input type="checkbox" name="preferredSubjects[]" value="Science"> Science</label>
-                <label><input type="checkbox" name="preferredSubjects[]" value="English"> English</label>
-                <label><input type="checkbox" name="preferredSubjects[]" value="History"> History</label>
-                <label><input type="checkbox" name="preferredSubjects[]" value="Art"> Art</label>
-                <label><input type="checkbox" name="preferredSubjects[]" value="Music"> Music</label>
-            </div>
-
-            <label for="additionalInfo">Additional Information:</label>
-            <textarea id="additionalInfo" name="additionalInfo" placeholder="Provide any additional details" rows="4"></textarea>
 
             <input type="submit" value="Apply Now">
         </form>
@@ -305,14 +293,10 @@ input[type="submit"]:hover {
         const contactNumber = document.getElementById('contactNumber').value;
         const email = document.getElementById('email').value;
         const address = document.getElementById('address').value;
-        const additionalInfo = document.getElementById('additionalInfo').value;
         
-        // Get preferred subjects from checkboxes
-        const preferredSubjects = [];
-        const checkboxes = document.querySelectorAll('input[name="preferredSubjects[]"]:checked');
-        checkboxes.forEach((checkbox) => {
-            preferredSubjects.push(checkbox.value);
-        });
+        
+        
+     
 
         // Create a message string
         let message = `Tuition Center Application\n\n`;
@@ -322,8 +306,7 @@ input[type="submit"]:hover {
         message += `Contact Number: ${contactNumber}\n`;
         message += `Email Address: ${email}\n`;
         message += `Address: ${address}\n`;
-        message += `Preferred Subjects: ${preferredSubjects.join(', ')}\n`;
-        message += `Additional Information: ${additionalInfo}`;
+     
 
         // URL encode the message (using encodeURIComponent to handle special characters and spaces)
         const encodedMessage = encodeURIComponent(message);
